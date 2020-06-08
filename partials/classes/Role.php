@@ -12,7 +12,7 @@ class Role {
         
         $this->role = $_role;
         $this->jobHiring = $_jobHiring;
-        $this->salary = $_salary;
+        $this->salary = number_format($_salary, 2);
     }
 
     // method
