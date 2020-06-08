@@ -13,19 +13,11 @@ class Status extends Role {
     }
 
     // method
-    public function status($b) {
-        if ($b == 'Presente') {
-            throw new Exception('Disponibile');
-        } else if ($b == 'Assente') {
-            throw new Exception('Indisponibile');
-        }
+    public function status($_status) {
+        if ($this->status == '') {
+            throw new Exception('Non hai iserito la presenza');
+        } 
+
+        return $_status;
     }
-}
-
-$test = new Status('Designer', '20-10-200', '20,000', 'Presente');
-
-try {
-    echo $test->status('Assente');
-} catch (Exception $c) {
-    echo $c->getMessage();
 }
